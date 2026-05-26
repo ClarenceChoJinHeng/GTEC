@@ -44,13 +44,16 @@
         </div>
         <h2 class="text-3xl font-black text-slate-900 mb-6">Driven by Passion &amp; Commitment</h2>
         <p class="text-slate-600 leading-relaxed mb-4">
-          Since its founding, Global Tech Engineering &amp; Construction Sdn Bhd — formerly known as Global Tech Engineering — has been competitive in the field of Engineering and Construction. This operation is organised and well delivered with passion and commitment.
+          Since its founding, GLOBAL TECH ENGINEERING &amp; CONSTRUCTION SDN BHD is formerly known as GLOBAL TECH ENGINEERING and has been overseeing this business last 4 years. This enterprise company recently converted to Sdn Bhd. GTEC has become competitive in the field of Engineering and construction. This operation, is organized and well delivered with passion and commitment. Experience and motivation lead the company into a greater prospect to be one of the best services.
+        </p>
+        <p class="text-slate-600 leading-relaxed mb-4">
+          Its initial operation was concentrated mainly with civil works involving renovation and masonry works which engage the company to be a specialist in that field. However, in its plight to gain more prestige and to widen its scope, the company started to venture into Mechanical and Electrical field like finishing works.
         </p>
         <p class="text-slate-600 leading-relaxed">
-          Our initial operation concentrated on civil works involving renovation and masonry. We have since ventured into Mechanical and Electrical fields including finishing works, with a professional workforce producing distinction in the construction industry.
+          In addition, a workforce of professional officers and staff, and skill full workers combined with technical expertise produce distinction in the construction industry. GTEC is company committed to contribute towards the attainment of superior quality service through the delivery of highly competent manpower and reliable maintenance, engineering &amp; construction services. We are committed in serving all our clients in the most satisfactory manner of customer services.
         </p>
       </div>
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-2 gap-4 lg:grid-cols-1">
         <div class="bg-blue-950 text-white rounded-2xl p-6 text-center">
           <div class="text-4xl font-black text-yellow-400 mb-2">4+</div>
           <div class="text-xs font-medium text-white/60 uppercase tracking-wide">Years in Business</div>
