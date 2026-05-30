@@ -26,4 +26,12 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Mission & Vision',
+  description: "Learn about GTEC's mission to be the leading engineering & construction brand in Malaysia, and our vision to deliver high-quality buildings on time and on budget.",
+  ogTitle: 'Mission & Vision | GTEC Sdn Bhd',
+  ogDescription: "GTEC's mission is to be the leading brand in Engineering & Construction recognised for quality and innovation.",
+  ogImage: 'https://gtec.com.my/assets/images/GTEC%20SDN%20BHD%20COMPANY%20PROFILE_page-0001.jpg',
+  ogUrl: 'https://gtec.com.my/mission-vision',
+})
 </script>

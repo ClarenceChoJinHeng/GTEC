@@ -117,6 +117,15 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Corporate Structure',
+  description: "Explore GTEC's corporate structure — from Managing Directors and General Manager through to Project Engineers, Safety Department, and field operations teams.",
+  ogTitle: 'Corporate Structure | GTEC Sdn Bhd',
+  ogDescription: "A look at GTEC's organisational hierarchy across management, operations, safety, and field teams.",
+  ogImage: 'https://gtec.com.my/assets/images/GTEC%20SDN%20BHD%20COMPANY%20PROFILE_page-0001.jpg',
+  ogUrl: 'https://gtec.com.my/corporate-structure',
+})
+
 import { UserGroupIcon } from '@heroicons/vue/24/outline'
 
 const pmRoles = ['Project Engineers', 'Site Supervisor', 'Skill Workers', 'General Workers']

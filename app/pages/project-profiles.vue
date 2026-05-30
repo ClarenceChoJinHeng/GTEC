@@ -93,6 +93,15 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Project Profiles',
+  description: 'A showcase of completed projects by GTEC Sdn Bhd — including work for Sime Darby/Inokom, BASF, Intel, Schaefer Kalk, Kinetics Malaysia, and Domino\'s Pizza.',
+  ogTitle: 'Project Profiles | GTEC Sdn Bhd',
+  ogDescription: 'Browse GTEC\'s completed engineering and construction projects across multiple industries and clients in Malaysia.',
+  ogImage: 'https://gtec.com.my/assets/images/GTEC%20SDN%20BHD%20COMPANY%20PROFILE_page-0012.jpg',
+  ogUrl: 'https://gtec.com.my/project-profiles',
+})
+
 import { ref, onMounted, onUnmounted } from 'vue'
 import { XMarkIcon } from '@heroicons/vue/24/outline'
 

@@ -58,6 +58,15 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+  title: 'Our Presence',
+  description: 'GTEC Sdn Bhd operates from Kulim, Kedah, Malaysia. Find our office addresses and contact details for enquiries on engineering and construction services.',
+  ogTitle: 'Our Presence | GTEC Sdn Bhd',
+  ogDescription: 'GTEC is located in Kulim, Kedah, Malaysia. Contact us for your engineering and construction needs.',
+  ogImage: 'https://gtec.com.my/assets/images/GTEC%20SDN%20BHD%20COMPANY%20PROFILE_page-0001.jpg',
+  ogUrl: 'https://gtec.com.my/our-presence',
+})
+
 import { MapPinIcon } from '@heroicons/vue/24/outline'
 
 const offices = [

@@ -4,7 +4,12 @@
       "Bash(npx nuxi@latest module add tailwindcss)",
       "Bash(npx nuxt *)",
       "Bash(npm list *)",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "Bash(New-Item -ItemType File -Path \"E:\\\\laragon\\\\www\\\\Projects\\\\gtec\\\\public\\\\robots.txt\" -Force)",
+      "Bash(Out-Null)",
+      "Bash(nAllow: /)",
+      "Bash(nSitemap: https://gtec.com.my/sitemap.xml\" -Encoding utf8)",
+      "Bash(Set-Content \"E:\\\\laragon\\\\www\\\\Projects\\\\gtec\\\\public\\\\robots.txt\" -Value \"User-agent: *`nAllow: /`n`nSitemap: https://gtec.com.my/sitemap.xml\" -Encoding utf8)"
     ]
   }
 }
