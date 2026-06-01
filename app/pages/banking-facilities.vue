@@ -48,7 +48,7 @@ useSeoMeta({
   description: 'GTEC Sdn Bhd maintains banking facilities with Maybank and OCBC Bank, reflecting our financial credibility and commitment to transparent business operations.',
   ogTitle: 'Banking Facilities | GTEC Sdn Bhd',
   ogDescription: 'GTEC maintains banking facilities with leading Malaysian financial institutions — Maybank and OCBC Bank.',
-  ogImage: 'https://gtec.com.my/assets/images/GTEC%20SDN%20BHD%20COMPANY%20PROFILE_page-0001.jpg',
+  ogImage: 'https://gtec.com.my/favicon.ico',
   ogUrl: 'https://gtec.com.my/banking-facilities',
 })
 

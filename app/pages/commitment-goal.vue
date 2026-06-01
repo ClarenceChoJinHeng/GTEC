@@ -59,7 +59,7 @@ useSeoMeta({
   description: "Discover GTEC's commitment to clients and our strategic goals — from building our brand and strengthening client relationships to maximising revenue.",
   ogTitle: 'Commitment & Goal | GTEC Sdn Bhd',
   ogDescription: "GTEC is committed to its clients and continuously works towards strategic goals in engineering and construction.",
-  ogImage: 'https://gtec.com.my/assets/images/GTEC%20SDN%20BHD%20COMPANY%20PROFILE_page-0001.jpg',
+  ogImage: 'https://gtec.com.my/favicon.ico',
   ogUrl: 'https://gtec.com.my/commitment-goal',
 })
 

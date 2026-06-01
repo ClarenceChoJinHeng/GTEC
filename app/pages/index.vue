@@ -315,11 +315,11 @@ useSeoMeta({
   description: 'GTEC Sdn Bhd is a Malaysian engineering and construction company based in Kulim, Kedah. Specialising in civil works, M&E, flooring, and facility maintenance.',
   ogTitle: 'GTEC Sdn Bhd — Engineering & Construction Specialists',
   ogDescription: 'A competitive engineering and construction company delivering quality, trust, and impressive results through skilled manpower and technical expertise.',
-  ogImage: 'https://gtec.com.my/assets/images/GTEC%20SDN%20BHD%20COMPANY%20PROFILE_page-0001.jpg',
+  ogImage: 'https://gtec.com.my/favicon.ico',
   ogUrl: 'https://gtec.com.my/',
   twitterTitle: 'GTEC Sdn Bhd — Engineering & Construction Specialists',
   twitterDescription: 'A competitive engineering and construction company based in Kulim, Kedah, Malaysia.',
-  twitterImage: 'https://gtec.com.my/assets/images/GTEC%20SDN%20BHD%20COMPANY%20PROFILE_page-0001.jpg',
+  twitterImage: 'https://gtec.com.my/favicon.ico',
 })
 
 import {

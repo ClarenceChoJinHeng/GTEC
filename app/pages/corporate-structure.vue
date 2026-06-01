@@ -122,7 +122,7 @@ useSeoMeta({
   description: "Explore GTEC's corporate structure — from Managing Directors and General Manager through to Project Engineers, Safety Department, and field operations teams.",
   ogTitle: 'Corporate Structure | GTEC Sdn Bhd',
   ogDescription: "A look at GTEC's organisational hierarchy across management, operations, safety, and field teams.",
-  ogImage: 'https://gtec.com.my/assets/images/GTEC%20SDN%20BHD%20COMPANY%20PROFILE_page-0001.jpg',
+  ogImage: 'https://gtec.com.my/favicon.ico',
   ogUrl: 'https://gtec.com.my/corporate-structure',
 })
 

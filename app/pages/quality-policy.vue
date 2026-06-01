@@ -41,7 +41,7 @@ useSeoMeta({
   description: "GTEC's quality policy is built on three core pillars: Customer First, Efficient Processes, and Continuous Improvement — ensuring the highest standards in every project.",
   ogTitle: 'Quality Policy | GTEC Sdn Bhd',
   ogDescription: 'GTEC is committed to the highest standards of quality through customer-first thinking, efficient processes, and continuous improvement.',
-  ogImage: 'https://gtec.com.my/assets/images/GTEC%20SDN%20BHD%20COMPANY%20PROFILE_page-0001.jpg',
+  ogImage: 'https://gtec.com.my/favicon.ico',
   ogUrl: 'https://gtec.com.my/quality-policy',
 })
 
