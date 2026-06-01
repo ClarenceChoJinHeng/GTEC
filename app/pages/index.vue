@@ -1,8 +1,19 @@
 <template>
   <!-- Hero -->
-  <section class="relative bg-blue-950 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-950 via-blue-900 to-slate-900"></div>
-    <div class="relative mx-auto max-w-7xl px-6 lg:px-8 pt-10 pb-20 lg:py-32 grid lg:grid-cols-2 gap-12 items-center">
+  <section class="relative overflow-hidden">
+    <!-- Background carousel -->
+    <div class="absolute inset-0">
+      <div
+        v-for="(img, i) in heroImages"
+        :key="img"
+        class="absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms]"
+        :class="i === activeSlide ? 'opacity-100' : 'opacity-0'"
+        :style="{ backgroundImage: `url('${img}')` }"
+      />
+    </div>
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black/55"></div>
+    <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-10 pb-20 lg:py-32 grid lg:grid-cols-2 gap-12 flex flex-col">
       <div>
         <div class="flex flex-col  gap-5 mb-6">
           <div class="max-w-[100px]">
@@ -11,7 +22,7 @@
           <div>
             <div class="h-0.5 w-10 bg-yellow-400"></div>
             <span class="text-yellow-400 text-xs font-bold tracking-[0.2em] uppercase">Quality | Trust |
-              Impressive</span>s
+              Impressives</span>
           </div>
         </div>
         <h1 class="text-5xl lg:text-7xl font-black text-yellow-400 tracking-tight mb-3">GTEC</h1>
@@ -31,6 +42,57 @@
             class="border border-white/25 text-white px-6 py-3 rounded-lg font-medium text-sm hover:bg-white/10 transition-colors">
             About Us
           </NuxtLink>
+        </div>
+      </div>
+      <div class="  w-full">
+        <div
+          class="relative overflow-hidden rounded-2xl shadow-2xl ring-1 ring-white/10 cursor-pointer"
+          @pointerdown="dragStart"
+          @pointerup="dragEnd"
+          @pointerleave="dragCancel"
+          @click="openLightbox"
+        >
+          <!-- Slide track -->
+          <div
+            class="flex transition-transform duration-500 ease-in-out"
+            :style="{ transform: `translateX(-${certSlide * 100}%)` }"
+          >
+            <img
+              v-for="img in certImages"
+              :key="img"
+              :src="img"
+              draggable="false"
+              class="w-full flex-shrink-0 object-contain select-none pointer-events-none"
+              alt="GTEC Certificate"
+            />
+          </div>
+          <!-- Arrows -->
+          <button
+            class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 backdrop-blur-sm hover:bg-yellow-400 hover:text-blue-950 text-white rounded-full p-2 transition-all"
+            @click.stop="prev"
+          >
+            <ChevronLeftIcon class="size-4" />
+          </button>
+          <button
+            class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 backdrop-blur-sm hover:bg-yellow-400 hover:text-blue-950 text-white rounded-full p-2 transition-all"
+            @click.stop="next"
+          >
+            <ChevronRightIcon class="size-4" />
+          </button>
+          <!-- Counter -->
+          <div class="absolute bottom-3 right-3 bg-black/50 backdrop-blur-sm text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+            {{ certSlide + 1 }} / {{ certImages.length }}
+          </div>
+        </div>
+        <!-- Pill dots -->
+        <div class="flex items-center justify-center gap-1.5 mt-4">
+          <button
+            v-for="(_, i) in certImages"
+            :key="i"
+            @click="certSlide = i"
+            class="h-1.5 rounded-full transition-all duration-300"
+            :class="i === certSlide ? 'bg-yellow-400 w-6' : 'bg-white/30 hover:bg-white/50 w-1.5'"
+          />
         </div>
       </div>
     </div>
@@ -109,9 +171,145 @@
       </div>
     </div>
   </section>
+
+  <!-- Lightbox -->
+  <Teleport to="body">
+    <Transition name="lightbox">
+      <div
+        v-if="isLightboxOpen"
+        class="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+        @click.self="isLightboxOpen = false"
+      >
+        <!-- Download -->
+        <a
+          :href="certPdfs[certSlide]"
+          :download="certPdfNames[certSlide]"
+          class="absolute top-4 right-16 bg-white/10 hover:bg-yellow-400 hover:text-blue-950 text-white rounded-full p-2 transition-all"
+          @click.stop
+        >
+          <ArrowDownTrayIcon class="size-6" />
+        </a>
+        <!-- Close -->
+        <button
+          class="absolute top-4 right-4 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 transition-colors"
+          @click="isLightboxOpen = false"
+        >
+          <XMarkIcon class="size-6" />
+        </button>
+        <!-- Image -->
+        <img
+          :src="certImages[certSlide]"
+          draggable="false"
+          class="max-h-[90vh] max-w-[90vw] object-contain rounded-xl shadow-2xl select-none"
+          alt="GTEC Certificate"
+        />
+        <!-- Prev -->
+        <button
+          class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-yellow-400 hover:text-blue-950 text-white rounded-full p-3 transition-all"
+          @click.stop="prev"
+        >
+          <ChevronLeftIcon class="size-6" />
+        </button>
+        <!-- Next -->
+        <button
+          class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-yellow-400 hover:text-blue-950 text-white rounded-full p-3 transition-all"
+          @click.stop="next"
+        >
+          <ChevronRightIcon class="size-6" />
+        </button>
+        <!-- Counter -->
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/10 text-white text-sm font-semibold px-4 py-1.5 rounded-full">
+          {{ certSlide + 1 }} / {{ certImages.length }}
+        </div>
+      </div>
+    </Transition>
+  </Teleport>
 </template>
 
+<style scoped>
+.lightbox-enter-active, .lightbox-leave-active { transition: opacity 0.25s ease; }
+.lightbox-enter-from, .lightbox-leave-to { opacity: 0; }
+</style>
+
 <script setup lang="ts">
+
+const heroImages = [
+  '/assets/images/home-carousel/172.jpg',
+  '/assets/images/home-carousel/173.avif',
+  '/assets/images/home-carousel/174.avif',
+]
+const activeSlide = ref(0)
+let slideInterval: ReturnType<typeof setInterval>
+
+const certImages = [
+  '/assets/images/110426016012.webp',
+  '/assets/images/GLOBAL%20TECH%20ENGINEERING%20%26%20CONSTRUCTION%20SDN.%20BHD.%20cidb-1.webp',
+  '/assets/images/GLOBAL%20TECH%20ENGINEERING%20%26%20CONSTRUCTION%20SDN.%20BHD.%20cidb-2.webp',
+]
+const certPdfs = [
+  '/assets/files/110426016012.pdf',
+  '/assets/files/GLOBAL%20TECH%20ENGINEERING%20%26%20CONSTRUCTION%20SDN.%20BHD.%20cidb.pdf',
+  '/assets/files/GLOBAL%20TECH%20ENGINEERING%20%26%20CONSTRUCTION%20SDN.%20BHD.%20cidb.pdf',
+]
+const certPdfNames = [
+  '110426016012.pdf',
+  'GLOBAL TECH ENGINEERING & CONSTRUCTION SDN. BHD. cidb.pdf',
+  'GLOBAL TECH ENGINEERING & CONSTRUCTION SDN. BHD. cidb.pdf',
+]
+const certSlide = ref(0)
+let certInterval: ReturnType<typeof setInterval> | undefined
+
+function prev() {
+  certSlide.value = (certSlide.value - 1 + certImages.length) % certImages.length
+}
+function next() {
+  certSlide.value = (certSlide.value + 1) % certImages.length
+}
+
+let dragStartX = 0
+let isDragging = false
+function dragStart(e: PointerEvent) {
+  dragStartX = e.clientX
+  isDragging = true
+}
+function dragEnd(e: PointerEvent) {
+  if (!isDragging) return
+  const diff = dragStartX - e.clientX
+  if (Math.abs(diff) > 40) diff > 0 ? next() : prev()
+  isDragging = false
+}
+function dragCancel() {
+  isDragging = false
+}
+
+const isLightboxOpen = ref(false)
+function openLightbox() {
+  if (isDragging) return
+  isLightboxOpen.value = true
+}
+function handleKeydown(e: KeyboardEvent) {
+  if (!isLightboxOpen.value) return
+  if (e.key === 'Escape') isLightboxOpen.value = false
+  if (e.key === 'ArrowLeft') prev()
+  if (e.key === 'ArrowRight') next()
+}
+
+onMounted(() => {
+  slideInterval = setInterval(() => {
+    activeSlide.value = (activeSlide.value + 1) % heroImages.length
+  }, 5000)
+  certInterval = setInterval(() => {
+    certSlide.value = (certSlide.value + 1) % certImages.length
+  }, 4000)
+  window.addEventListener('keydown', handleKeydown)
+})
+
+onUnmounted(() => {
+  clearInterval(slideInterval)
+  clearInterval(certInterval)
+  window.removeEventListener('keydown', handleKeydown)
+})
+
 useSeoMeta({
   title: 'Engineering & Construction Specialists',
   description: 'GTEC Sdn Bhd is a Malaysian engineering and construction company based in Kulim, Kedah. Specialising in civil works, M&E, flooring, and facility maintenance.',
@@ -132,6 +330,10 @@ import {
   BuildingLibraryIcon,
   BuildingOffice2Icon,
   FolderOpenIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  XMarkIcon,
+  ArrowDownTrayIcon,
 } from '@heroicons/vue/24/outline'
 
 const sections = [

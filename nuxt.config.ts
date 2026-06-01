@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap'],
 
+
   site: {
     url: 'https://gtec.com.my', // update this when you deploy
     name: 'GTEC Sdn Bhd',

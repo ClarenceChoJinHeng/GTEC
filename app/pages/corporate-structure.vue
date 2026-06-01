@@ -22,17 +22,17 @@
         <div class="w-px h-8 bg-slate-300"></div>
 
         <!-- Main row: GM + HR side -->
-        <div class="flex items-start gap-6 w-full justify-center">
+        <div class="flex flex-col items-center gap-4 w-full md:flex-row md:items-start md:justify-center md:gap-6">
 
           <!-- GM branch -->
-          <div class="flex flex-col items-center gap-0 min-w-0 flex-1 max-w-lg">
+          <div class="flex flex-col items-center gap-0 w-full max-w-lg">
             <div class="bg-blue-700 text-white rounded-2xl px-6 py-3 font-bold text-sm text-center w-full">
               General Manager
             </div>
             <div class="w-px h-8 bg-slate-300"></div>
 
             <!-- 3 department columns -->
-            <div class="grid grid-cols-3 gap-3 w-full">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full">
 
               <!-- Safety -->
               <div class="flex flex-col items-center gap-1">
@@ -75,15 +75,15 @@
             </div>
           </div>
 
-          <!-- Connector -->
-          <div class="h-px w-8 bg-slate-300 mt-[68px] shrink-0"></div>
+          <!-- Connector - desktop only -->
+          <div class="hidden md:block h-px w-8 bg-slate-300 mt-[68px] shrink-0"></div>
 
           <!-- HR + Purchasing -->
-          <div class="flex flex-col gap-3 mt-[52px] min-w-[110px]">
-            <div class="bg-slate-700 text-white rounded-xl px-4 py-3 text-center font-bold text-xs">
+          <div class="flex flex-row gap-3 w-full md:flex-col md:mt-[52px] md:w-auto md:min-w-[110px]">
+            <div class="flex-1 md:flex-none bg-slate-700 text-white rounded-xl px-4 py-3 text-center font-bold text-xs">
               Human Resource
             </div>
-            <div class="bg-slate-700 text-white rounded-xl px-4 py-3 text-center font-bold text-xs">
+            <div class="flex-1 md:flex-none bg-slate-700 text-white rounded-xl px-4 py-3 text-center font-bold text-xs">
               Purchasing
             </div>
           </div>
