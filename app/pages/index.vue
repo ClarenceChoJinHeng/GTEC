@@ -234,9 +234,12 @@
 <script setup lang="ts">
 
 const heroImages = [
-  '/assets/images/home-carousel/172.jpg',
-  '/assets/images/home-carousel/173.avif',
-  '/assets/images/home-carousel/174.avif',
+  "/assets/images/home-carousel/5.webp", 
+  "/assets/images/home-carousel/6.webp", 
+  "/assets/images/home-carousel/4.webp", 
+  "/assets/images/home-carousel/3.webp", 
+  "/assets/images/home-carousel/2.webp", 
+  "/assets/images/home-carousel/1.webp",
 ]
 const activeSlide = ref(0)
 let slideInterval: ReturnType<typeof setInterval>
