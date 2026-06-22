@@ -2,8 +2,8 @@
   <section class="bg-blue-950 py-16">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="flex items-center gap-3 mb-3">
-        <div class="h-0.5 w-8 bg-yellow-400"></div>
-        <span class="text-yellow-400 text-xs font-bold tracking-widest uppercase">GTEC SDN BHD</span>
+        <div class="h-0.5 w-8 bg-gray-300"></div>
+        <span class="text-gray-300 text-xs font-bold tracking-widest uppercase">GTEC SDN BHD</span>
       </div>
       <h1 class="text-4xl lg:text-5xl font-black text-white">Our Presence</h1>
     </div>
@@ -25,10 +25,10 @@
         >
           <div class="flex items-start gap-4">
             <div class="w-12 h-12 bg-blue-950 rounded-2xl flex items-center justify-center shrink-0">
-              <MapPinIcon class="size-6 text-yellow-400" />
+              <MapPinIcon class="size-6 text-gray-300" />
             </div>
             <div>
-              <div class="text-[10px] font-bold text-yellow-600 uppercase tracking-widest mb-1">{{ office.type }}</div>
+              <div class="text-[10px] font-bold text-blue-900 uppercase tracking-widest mb-1">{{ office.type }}</div>
               <h3 class="text-base font-black text-slate-900 mb-3 leading-snug">{{ office.name }}</h3>
               <p class="text-slate-600 text-sm leading-relaxed">{{ office.address }}</p>
               <div class="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-blue-700 bg-blue-50 px-3 py-1.5 rounded-full border border-blue-100">
@@ -48,7 +48,7 @@
             :key="contact.label"
             class="bg-white/5 rounded-2xl p-4 border border-white/10"
           >
-            <div class="text-yellow-400 text-xs font-bold mb-1">{{ contact.label }}</div>
+            <div class="text-gray-300 text-xs font-bold mb-1">{{ contact.label }}</div>
             <div class="text-white/80">{{ contact.value }}</div>
           </div>
         </div>

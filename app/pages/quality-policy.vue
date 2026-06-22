@@ -2,8 +2,8 @@
   <section class="bg-blue-950 py-16">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="flex items-center gap-3 mb-3">
-        <div class="h-0.5 w-8 bg-yellow-400"></div>
-        <span class="text-yellow-400 text-xs font-bold tracking-widest uppercase">GTEC SDN BHD</span>
+        <div class="h-0.5 w-8 bg-gray-200"></div>
+        <span class="text-gray-300 text-xs font-bold tracking-widest uppercase">GTEC SDN BHD</span>
       </div>
       <h1 class="text-4xl lg:text-5xl font-black text-white">Quality Policy</h1>
     </div>
@@ -63,18 +63,18 @@ const pillars = [
     desc: 'We follow efficient and reliable processes that are capable of meeting requirements of business.',
     icon: CogIcon,
     cardClass: 'border-blue-950 bg-blue-950',
-    iconBg: 'bg-yellow-400',
+    iconBg: 'bg-gray-200',
     iconColor: 'text-blue-950',
-    titleColor: 'text-yellow-400',
+    titleColor: 'text-gray-300',
     textColor: 'text-white/70',
   },
   {
     title: 'Continuous Improvement',
     desc: 'We improve our service, processes and people through continuous improvements based on Agile and Lean principles.',
     icon: ArrowPathIcon,
-    cardClass: 'border-yellow-200 bg-yellow-50',
-    iconBg: 'bg-yellow-100',
-    iconColor: 'text-yellow-600',
+    cardClass: 'border-slate-200 bg-slate-50',
+    iconBg: 'bg-slate-100',
+    iconColor: 'text-slate-600',
     titleColor: 'text-slate-900',
     textColor: 'text-slate-600',
   },

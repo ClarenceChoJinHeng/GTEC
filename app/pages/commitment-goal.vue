@@ -2,8 +2,8 @@
   <section class="bg-blue-950 py-16">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="flex items-center gap-3 mb-3">
-        <div class="h-0.5 w-8 bg-yellow-400"></div>
-        <span class="text-yellow-400 text-xs font-bold tracking-widest uppercase">GTEC SDN BHD</span>
+        <div class="h-0.5 w-8 bg-gray-300"></div>
+        <span class="text-gray-300 text-xs font-bold tracking-widest uppercase">GTEC SDN BHD</span>
       </div>
       <h1 class="text-4xl lg:text-5xl font-black text-white">Commitment &amp; Goal</h1>
     </div>
@@ -14,7 +14,7 @@
       <!-- Commitments -->
       <div>
         <div class="flex items-center gap-3 mb-8">
-          <div class="h-0.5 w-8 bg-yellow-400"></div>
+          <div class="h-0.5 w-8 bg-gray-300"></div>
           <h2 class="text-2xl font-black text-slate-900">Our Commitments</h2>
         </div>
         <div class="space-y-4">
@@ -35,7 +35,7 @@
       <!-- Goals -->
       <div>
         <div class="flex items-center gap-3 mb-8">
-          <div class="h-0.5 w-8 bg-yellow-400"></div>
+          <div class="h-0.5 w-8 bg-slate-900"></div>
           <h2 class="text-2xl font-black text-slate-900">Our Goals</h2>
         </div>
         <div class="space-y-3">
@@ -44,7 +44,7 @@
             :key="i"
             class="flex items-center gap-4 p-5 rounded-2xl bg-blue-950 text-white"
           >
-            <div class="w-2 h-2 bg-yellow-400 rounded-full shrink-0"></div>
+            <div class="w-2 h-2 bg-white rounded-full shrink-0"></div>
             <p class="font-medium leading-snug">{{ item }}</p>
           </div>
         </div>
@@ -83,7 +83,7 @@ const stepColors = [
   'bg-red-600',
   'bg-orange-500',
   'bg-amber-500',
-  'bg-yellow-500',
+  'bg-blue-600',
   'bg-slate-400',
 ]
 </script>

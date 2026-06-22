@@ -2,8 +2,8 @@
   <section class="bg-blue-950 py-16">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="flex items-center gap-3 mb-3">
-        <div class="h-0.5 w-8 bg-yellow-400"></div>
-        <span class="text-yellow-400 text-xs font-bold tracking-widest uppercase">GTEC SDN BHD</span>
+        <div class="h-0.5 w-8 bg-gray-300"></div>
+        <span class="text-gray-300 text-xs font-bold tracking-widest uppercase">GTEC SDN BHD</span>
       </div>
       <h1 class="text-4xl lg:text-5xl font-black text-white">Corporate Structure</h1>
     </div>
@@ -94,7 +94,7 @@
       <!-- Team grid -->
       <div class="mt-20">
         <div class="flex items-center gap-3 mb-8">
-          <div class="h-0.5 w-8 bg-yellow-400"></div>
+          <div class="h-0.5 w-8 bg-gray-300"></div>
           <h2 class="text-2xl font-black text-slate-900">Our Team</h2>
         </div>
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">

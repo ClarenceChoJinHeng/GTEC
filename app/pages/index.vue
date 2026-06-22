@@ -20,13 +20,13 @@
             <img src="/assets/images/logo.webp" alt="gtec-logo">
           </div>
           <div>
-            <div class="h-0.5 w-10 bg-yellow-400"></div>
-            <span class="text-yellow-400 text-xs font-bold tracking-[0.2em] uppercase">Quality | Trust |
+            <div class="h-0.5 w-10 bg-gray-300"></div>
+            <span class="text-gray-300 text-xs font-bold tracking-[0.2em] uppercase">Quality | Trust |
               Impressives</span>
           </div>
         </div>
-        <h1 class="text-5xl lg:text-7xl font-black text-yellow-400 tracking-tight mb-3">GTEC</h1>
-        <h2 class="text-lg lg:text-xl font-semibold text-white/80 mb-6 leading-snug">
+        <h1 class="text-5xl lg:text-7xl font-black text-white/60 tracking-tight mb-3">GTEC</h1>
+        <h2 class="text-lg lg:text-xl font-semibold text-white/60 mb-6 leading-snug">
           Global Tech Engineering &amp; Construction Sdn Bhd
         </h2>
         <p class="text-white/60 text-base leading-relaxed mb-8 max-w-lg">
@@ -35,7 +35,7 @@
         </p>
         <div class="flex flex-wrap gap-4">
           <NuxtLink to="/project-profiles"
-            class="bg-yellow-400 text-blue-950 px-6 py-3 rounded-lg font-bold text-sm hover:bg-yellow-300 transition-colors">
+            class="bg-blue-800 text-white px-6 py-3 rounded-lg font-bold text-sm hover:bg-blue-700 transition-colors">
             View Projects
           </NuxtLink>
           <NuxtLink to="/mission-vision"
@@ -68,13 +68,13 @@
           </div>
           <!-- Arrows -->
           <button
-            class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 backdrop-blur-sm hover:bg-yellow-400 hover:text-blue-950 text-white rounded-full p-2 transition-all"
+            class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 backdrop-blur-sm hover:bg-blue-800 hover:text-white text-white rounded-full p-2 transition-all"
             @click.stop="prev"
           >
             <ChevronLeftIcon class="size-4" />
           </button>
           <button
-            class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 backdrop-blur-sm hover:bg-yellow-400 hover:text-blue-950 text-white rounded-full p-2 transition-all"
+            class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 backdrop-blur-sm hover:bg-blue-800 hover:text-white text-white rounded-full p-2 transition-all"
             @click.stop="next"
           >
             <ChevronRightIcon class="size-4" />
@@ -91,7 +91,7 @@
             :key="i"
             @click="certSlide = i"
             class="h-1.5 rounded-full transition-all duration-300"
-            :class="i === certSlide ? 'bg-yellow-400 w-6' : 'bg-white/30 hover:bg-white/50 w-1.5'"
+            :class="i === certSlide ? 'bg-white w-6' : 'bg-white/30 hover:bg-white/50 w-1.5'"
           />
         </div>
       </div>
@@ -102,7 +102,7 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
       <div>
         <div class="flex items-center gap-3 mb-4">
-          <div class="h-0.5 w-8 bg-yellow-400"></div>
+          <div class="h-0.5 w-8 bg-blue-900"></div>
           <span class="text-blue-900 text-xs font-bold tracking-widest uppercase">Who We Are</span>
         </div>
         <h2 class="text-3xl font-black text-slate-900 mb-6">Driven by Passion &amp; Commitment</h2>
@@ -128,10 +128,10 @@
       </div>
       <div class="grid grid-cols-2 gap-4 lg:grid-cols-1">
         <div class="bg-blue-950 text-white rounded-2xl p-6 text-center">
-          <div class="text-4xl font-black text-yellow-400 mb-2">4+</div>
+          <div class="text-4xl font-black text-gray-300 mb-2">4+</div>
           <div class="text-xs font-medium text-white/60 uppercase tracking-wide">Years in Business</div>
         </div>
-        <div class="bg-yellow-400 text-blue-950 rounded-2xl p-6 text-center">
+        <div class="bg-blue-900 text-white rounded-2xl p-6 text-center">
           <div class="text-4xl font-black mb-2">6+</div>
           <div class="text-xs font-bold uppercase tracking-wide">Major Clients</div>
         </div>
@@ -152,9 +152,9 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="text-center mb-12">
         <div class="flex items-center justify-center gap-3 mb-4">
-          <div class="h-0.5 w-8 bg-yellow-400"></div>
+          <div class="h-0.5 w-8 bg-blue-900"></div>
           <span class="text-blue-900 text-xs font-bold tracking-widest uppercase">Company Profile</span>
-          <div class="h-0.5 w-8 bg-yellow-400"></div>
+          <div class="h-0.5 w-8 bg-blue-900"></div>
         </div>
         <h2 class="text-3xl font-black text-slate-900">Explore Our Profile</h2>
       </div>
@@ -184,7 +184,7 @@
         <a
           :href="certPdfs[certSlide]"
           :download="certPdfNames[certSlide]"
-          class="absolute top-4 right-16 bg-white/10 hover:bg-yellow-400 hover:text-blue-950 text-white rounded-full p-2 transition-all"
+          class="absolute top-4 right-16 bg-white/10 hover:bg-blue-800 hover:text-white text-white rounded-full p-2 transition-all"
           @click.stop
         >
           <ArrowDownTrayIcon class="size-6" />
@@ -205,14 +205,14 @@
         />
         <!-- Prev -->
         <button
-          class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-yellow-400 hover:text-blue-950 text-white rounded-full p-3 transition-all"
+          class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-blue-800 hover:text-white text-white rounded-full p-3 transition-all"
           @click.stop="prev"
         >
           <ChevronLeftIcon class="size-6" />
         </button>
         <!-- Next -->
         <button
-          class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-yellow-400 hover:text-blue-950 text-white rounded-full p-3 transition-all"
+          class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-blue-800 hover:text-white text-white rounded-full p-3 transition-all"
           @click.stop="next"
         >
           <ChevronRightIcon class="size-6" />
