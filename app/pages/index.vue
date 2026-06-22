@@ -16,7 +16,7 @@
     <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 pt-10 pb-20 lg:py-32 grid lg:grid-cols-2 gap-12 flex flex-col">
       <div>
         <div class="flex flex-col  gap-5 mb-6">
-          <div class="max-w-[100px]">
+          <div class="max-w-[100px] md:max-w-[150px] lg:max-w-[200px]">
             <img src="/assets/images/logo.webp" alt="gtec-logo">
           </div>
           <div>
