@@ -2,11 +2,8 @@
   <section class="bg-blue-950 py-16">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="flex items-center gap-3 mb-3">
-        <div class="h-0.5 w-8 bg-yellow-400"></div>
-        <span
-          class="text-yellow-400 text-xs font-bold tracking-widest uppercase"
-          >GTEC SDN BHD</span
-        >
+        <div class="h-0.5 w-8 bg-gray-300"></div>
+        <span class="text-gray-300 text-xs font-bold tracking-widest uppercase">GTEC SDN BHD</span>
       </div>
       <h1 class="text-4xl lg:text-5xl font-black text-white">
         Project Profiles
@@ -30,22 +27,12 @@
           class="bg-blue-950 px-8 py-6 flex items-center justify-between flex-wrap gap-4"
         >
           <div>
-            <div
-              class="text-yellow-400 text-xs font-bold tracking-widest uppercase mb-1"
-            >
-              {{ project.client }}
-            </div>
+            <div class="text-gray-300 text-xs font-bold tracking-widest uppercase mb-1">{{ project.client }}</div>
             <h2 class="text-xl font-black text-white">{{ project.title }}</h2>
           </div>
-          <div
-            class="flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5"
-          >
-            <div class="w-1.5 h-1.5 bg-yellow-400 rounded-full"></div>
-            <span class="text-white/70 text-xs font-medium"
-              >{{ project.works.length }} work package{{
-                project.works.length !== 1 ? "s" : ""
-              }}</span
-            >
+          <div class="flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5">
+            <div class="w-1.5 h-1.5 bg-gray-300 rounded-full"></div>
+            <span class="text-white/70 text-xs font-medium">{{ project.works.length }} work package{{ project.works.length !== 1 ? 's' : '' }}</span>
           </div>
         </div>
 
@@ -65,9 +52,7 @@
               />
             </div>
             <div class="p-3 flex items-center gap-2">
-              <div
-                class="w-1.5 h-1.5 bg-yellow-400 rounded-full shrink-0"
-              ></div>
+              <div class="w-1.5 h-1.5 bg-gray-300 rounded-full shrink-0"></div>
               <p class="text-xs font-medium text-slate-700">{{ work.label }}</p>
             </div>
           </div>
@@ -105,10 +90,8 @@
             class="w-full rounded-2xl shadow-2xl"
           />
           <div class="mt-3 flex items-center gap-2">
-            <div class="w-1.5 h-1.5 bg-yellow-400 rounded-full shrink-0"></div>
-            <p class="text-white/80 text-sm font-medium">
-              {{ lightbox.label }}
-            </p>
+            <div class="w-1.5 h-1.5 bg-gray-300 rounded-full shrink-0"></div>
+            <p class="text-white/80 text-sm font-medium">{{ lightbox.label }}</p>
           </div>
         </div>
       </div>
